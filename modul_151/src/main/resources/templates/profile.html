@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Registriert</title>
+</head>
+<body>
+
+<div th:replace="/fragments/header.html"></div>
+
+<h1>Regestriet:</h1>
+
+    <label for="firstname">Voranme:</label> <div id="firstname" th:text="${person.getFirstname()}"/><br/>
+    <label for="name">Nachname:</label> <div id="name" th:text="${person.getName()}"/><br/>
+    <label for="email">E-Mail:</label> <div id="email" th:text="${person.getEmail()}"/><br/>
+    <label for="street">Strasse:</label> <div id="street" th:text="${person.address.getStreet()}"/><br/>
+<!--    <label for="city">PLZ, Ort:</label> <div id="zip" th:field="*{address.place.zip}"/> <div id="city" th:field="*{address.place.city}"/><br/>-->
+
+<div th:replace="/fragments/footer :: footer"></div>
+</body>
+</html>

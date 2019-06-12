@@ -1,0 +1,13 @@
+<div th:fragment="header" xmlns:th="http://www.w3.org/1999/xhtml">
+    <nav class="navbar navbar-default navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav hover-dark">
+                <li><a href="/">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/registration">Regestrieren</a></li>
+                // th:if="ä{true}" noch anpassen - condition machen!
+                <li th:if="${true}"><a href="/login">Anmelden</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>

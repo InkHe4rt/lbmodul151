@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Registration</title>
+</head>
+<body>
+
+<div th:replace="/fragments/header.html"></div>
+
+<h1>Regestrieren:</h1>
+
+<form method="post" th:action="@{/profile}" th:object="${person}">
+
+    <input type="hidden" th:field="*{id}"/>
+    <input type="hidden" th:field="*{address.id}"/>
+    <input type="hidden" th:field="*{address.place.id}"/>
+
+    <label for="firstname">Vorname</label>
+    <input type="text" id="firstname" name="firstname" th:field="*{firstname}" required/><br/>
+
+    <label for="name">Nachname</label>
+    <input type="text" id="name" name="name"
+                                                   th:field="*{name}" required/><br/>
+    <label for="email">E-Mail</label>
+    <input type="text" id="email" name="email" th:field="*{email}" required/><br/>
+
+    <label for="street">Strasse</label>
+    <input type="text" id="street" name="street" th:field="*{address.street}" required/><br/>
+
+    <label for="place">PLZ, Ort</label>
+    <input type="text" id="zip" name="zip" th:field="*{address.place.zip}" required/>
+    <input type="text" id="place" name="place" th:field="*{address.place.city}" required/><br/>
+
+    <label for="password">Password</label>
+    <input type="password" th:field="*{password}" id="password" name="password" required/>
+
+    <input type="submit" value="Senden"/>
+</form>
+
+<div th:replace="/fragments/footer :: footer"></div>
+
+</body>
+</html>

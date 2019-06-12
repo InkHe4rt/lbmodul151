@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div th:replace="/fragments/header.html"></div>
+
+
+
+<form th:objekt="${person}" method="post" th:action="@{/login/shop}">
+
+<!--    <input name="id" type="hidden" th:field="*{id}"/>-->
+
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input name="password"  type="password" class="form-control" id="password" placeholder="Password">
+    </div>
+    <button type="submit"  class="btn btn-primary">Submit</button>
+</form>
+
+<div th:replace="/fragments/footer :: footer"></div>
+</body>
+</html>
