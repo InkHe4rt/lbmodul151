@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/artikelAuflistung.js"></script>
+</head>
+<body>
+<div th:replace="/fragments/header.html"></div>
+
+<h1><u>Bestellung </u></h1>
+
+<h2>Produkte:</h2>
+
+<ul>
+    <li>
+        <input value="coffee"  type="checkbox" onclick="showList()">Kaffee
+    </li>
+
+    <li class="content hide">
+        <ul>
+            <li><input type="checkbox">Rahm</li>
+            <li><input type="checkbox">Milch</li>
+            <li><input type="checkbox">Zucker</li>
+            <li><input type="checkbox">Süssungsmittel</li>
+        </ul>
+    </li>
+
+    <li>
+        <input  value="tea" type="checkbox">Tee
+    </li>
+
+    <li class="content hide" onclick="showList()">
+        <ul>
+            <li><input type="checkbox">Rahm</li>
+            <li><input type="checkbox">Milch</li>
+            <li><input type="checkbox">Zucker</li>
+            <li><input type="checkbox">Süssungsmittel</li>
+        </ul>
+    </li>
+
+</ul>
+
+<div th:replace="/fragments/footer :: footer"></div>
+
+</body>
+</html>

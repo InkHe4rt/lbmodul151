@@ -4,3 +4,11 @@
 .Aktiv{
     font-weight: 900;
 }
+.hide{
+    visibility: hidden;
+    position: absolute;
+}
+.show{
+    visibility: visible;
+    position: relative;
+}
