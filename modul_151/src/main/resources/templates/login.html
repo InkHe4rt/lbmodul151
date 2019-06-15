@@ -10,11 +10,8 @@
 
 <div th:replace="/fragments/header.html"></div>
 
-
-
+<!--/*@thymesVar id="person" type=""*/-->
 <form th:objekt="${person}" method="post" th:action="@{/login/shop}">
-
-<!--    <input name="id" type="hidden" th:field="*{id}"/>-->
 
     <div class="form-group">
         <label for="email">Email address</label>

@@ -33,6 +33,11 @@ public class Place {
     public Place() {
     }
 
+    /**
+     * meine überladung von dem Ort welcher die postleitzahl und die stadt beinhalted.
+     * @param zip
+     * @param city
+     */
     public Place(String zip, String city) {
         this.zip = zip;
         this.city = city;

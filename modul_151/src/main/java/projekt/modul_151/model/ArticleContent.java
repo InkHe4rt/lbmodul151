@@ -3,7 +3,6 @@ package projekt.modul_151.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import java.util.List;
 
 /**
  * Dies ist das model für den Artikelinhalt.
@@ -34,6 +33,12 @@ public class ArticleContent {
     public ArticleContent() {
     }
 
+    /**
+     * eine weitere überladung von Article content mit name & preis
+     *
+     * @param name
+     * @param price
+     */
     public ArticleContent(String name, Double price) {
         this.name = name;
         this.price = price;

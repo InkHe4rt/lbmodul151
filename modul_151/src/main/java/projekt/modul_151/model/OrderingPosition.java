@@ -31,6 +31,12 @@ public class OrderingPosition {
     public OrderingPosition() {
     }
 
+    /**
+     * diese überladene methode wird ebenfalls nicht gebraucht in meiner jetzigen version.
+     *
+     * @param ordFk
+     * @param ordOptFK
+     */
     public OrderingPosition(Ordering ordFk, OrderingOption ordOptFK) {
 //        this.ordFk = ordFk;
 //        this.ordOptFK = ordOptFK;

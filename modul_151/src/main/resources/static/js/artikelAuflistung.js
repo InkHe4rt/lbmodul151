@@ -1,3 +1,6 @@
+/**
+ * Hier wollte ich ursprünglich eine liste ein und ausblenden von meinen Artikeln.
+ */
 function showList() {
 
     var content1 = document.getElementById("liste1");

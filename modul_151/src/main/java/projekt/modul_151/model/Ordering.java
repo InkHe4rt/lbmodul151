@@ -35,6 +35,13 @@ public class Ordering {
     public Ordering() {
     }
 
+    /**
+     * überladung von der bestellung.
+     *
+     * @param perFk
+     * @param date
+     * @param comment
+     */
     public Ordering(Person perFk, String date, String comment) {
         this.perFk = perFk;
         this.date = date;

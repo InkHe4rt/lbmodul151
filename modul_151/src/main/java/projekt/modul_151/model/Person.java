@@ -43,6 +43,11 @@ public class Person {
     @JoinColumn(name = "addressFk")
     private Address address;
 
+    /**
+     * Hier bestimm ich das PErson einen namen und nachnamen hat.
+     * @param name
+     * @param firstname
+     */
     public Person(String name, String firstname) {
         this.name = name;
         this.firstname = firstname;

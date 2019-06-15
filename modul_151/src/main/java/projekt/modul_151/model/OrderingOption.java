@@ -31,7 +31,11 @@ public class OrderingOption {
     public OrderingOption() {
     }
 
-    // nicht sicher ob ich den brauche später kontrollieren
+    /**
+     * leider kam diese überladun auch noch nicht zum einsatz da ich noch keine optionen habe.
+     * @param ordPosFk
+     * @param artConFK
+     */
     public OrderingOption(OrderingPosition ordPosFk, ArticleContent artConFK) {
         this.ordPosFk = ordPosFk;
         this.artConFK = artConFK;
