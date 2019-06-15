@@ -2,21 +2,42 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Shop</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <div th:replace="/fragments/header.html"></div>
 
-<h1><u>Bestellung </u></h1>
 
 <h2>Produkte:</h2>
+<p>Wir Verkaufen Kaffee & Tee mit zusatzprodukte falls Sie diese dazu wünschen.</p>
+<dl>
+    <dd>
+        <label>Kaffee</label>
+    </dd>
+    <dd>
+        <dl>
+            <dd><label>Rahm</label></dd>
+            <dd><label>Milch</label></dd>
+            <dd><label>Zucker</label></dd>
+            <dd><label>Süssungsmittel</label></dd>
+        </dl>
+    </dd>
+    <dd>
+        <label>Tee</label>
+    </dd>
+    <dd>
+        <dl>
+            <dd><label>Rahm</label></dd>
+            <dd><label>Milch</label></dd>
+            <dd><label>Zucker</label></dd>
+            <dd><label>Süssungsmittel</label></dd>
+        </dl>
+    </dd>
+</dl>
 
-<ul>
-    <li>Kaffee</li>
-    <li>Tee</li>
-</ul>
+<p> bitte loggen Sie sich ein oder Regestrieren Sie sich für Bestellungen falls gewünscht</p>
 
 <div th:replace="/fragments/footer :: footer"></div>
 

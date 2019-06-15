@@ -2,6 +2,15 @@ package projekt.modul_151.model;
 
 import javax.persistence.*;
 
+/**
+ * Dies ist das model für die Bestellposition.
+ *
+ *
+ * @author  Dubler Michel
+ * @version 1.0
+ * @since   2019-06-15
+ *
+ */
 @Entity(name = "ordering_Position")
 @Table(name = "ordering_Position")
 public class OrderingPosition {

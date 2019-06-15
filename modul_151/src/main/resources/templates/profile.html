@@ -10,9 +10,9 @@
 
 <div th:replace="/fragments/header.html"></div>
 
-<h1>Regestriet:</h1>
+<h1>Registriert:</h1>
 
-    <label for="firstname">Voranme:</label> <div id="firstname" th:text="${person.getFirstname()}"/><br/>
+    <label for="firstname">Vorname:</label> <div id="firstname" th:text="${person.getFirstname()}"/><br/>
     <label for="name">Nachname:</label> <div id="name" th:text="${person.getName()}"/><br/>
     <label for="email">E-Mail:</label> <div id="email" th:text="${person.getEmail()}"/><br/>
     <label for="street">Strasse:</label> <div id="street" th:text="${person.address.getStreet()}"/><br/>

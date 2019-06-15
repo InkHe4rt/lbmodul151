@@ -8,7 +8,15 @@ import projekt.modul_151.repository.PersonRepository;
 import javax.validation.Valid;
 import java.util.Optional;
 
-
+/**
+ * Dies ist der Service für die Person.
+ *
+ *
+ * @author  Dubler Michel
+ * @version 1.0
+ * @since   2019-06-15
+ *
+ */
 @Service
 public class PersonService {
 

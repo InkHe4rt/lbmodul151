@@ -1,12 +1,19 @@
 package projekt.modul_151.model;
 
-
-
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
+/**
+ * Dies ist das model für den Artikelinhalt.
+ *
+ *
+ * @author  Dubler Michel
+ * @version 1.0
+ * @since   2019-06-15
+ *
+ */
 @Entity(name = "article_Content")
 @Table(name = "article_Content")
 public class ArticleContent {

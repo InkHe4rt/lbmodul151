@@ -5,6 +5,15 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+/**
+ * Dies ist das model für den Ort.
+ *
+ *
+ * @author  Dubler Michel
+ * @version 1.0
+ * @since   2019-06-15
+ *
+ */
 @Entity(name = "place")
 @Table(name = "place")
 public class Place {

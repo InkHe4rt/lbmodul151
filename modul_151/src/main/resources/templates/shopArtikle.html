@@ -5,43 +5,45 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/artikelAuflistung.js"></script>
 </head>
 <body>
 <div th:replace="/fragments/header.html"></div>
 
-<h1><u>Bestellung </u></h1>
+<h1><u>Bestellung</u></h1>
+
 
 <h2>Produkte:</h2>
 
-<ul>
-    <li>
-        <input value="coffee"  type="checkbox" onclick="showList()">Kaffee
-    </li>
+<form th:objekt="${Ordering}" method="post" th:action="@{/order}">
+<dl>
+    <dd>
+        <input value="coffee"  type="checkbox" id="coffee">
+        <label for="coffee">Kaffee</label>
+    </dd>
+        <dd>
+            <dl>
+                <dd><input type="checkbox" value="cream" id="cof_cre"><label for="cof_cre">Rahm</label></dd>
+                <dd><input type="checkbox" value="milk" id="cof_mil"><label for="cof_mil">Milch</label></dd>
+                <dd><input type="checkbox" value="sugar" id="cof_sug"><label for="cof_sug">Zucker</label></dd>
+                <dd><input type="checkbox" value="sweetener" id="cof_swe"><label for="cof_swe">Süssungsmittel</label></dd>
+            </dl>
+        </dd>
+    <dd>
+        <input value="tea"  type="checkbox" id="tea">
+        <label for="tea">Tee</label>
+    </dd>
+    <dd>
+        <dl>
+            <dd><input type="checkbox" value="cream" id="tea_cre"><label for="tea_cre">Rahm</label></dd>
+            <dd><input type="checkbox" value="milk" id="tea_mil"><label for="tea_mil">Milch</label></dd>
+            <dd><input type="checkbox" value="sugar" id="tea_sug"><label for="tea_sug">Zucker</label></dd>
+            <dd><input type="checkbox" value="sweetener" id="tea_swe"><label for="tea_swe">Süssungsmittel</label></dd>
+        </dl>
+    </dd>
+</dl>
+    <button type="submit"  class="btn btn-primary">Bestellen</button>
+</form>
 
-    <li class="content hide">
-        <ul>
-            <li><input type="checkbox">Rahm</li>
-            <li><input type="checkbox">Milch</li>
-            <li><input type="checkbox">Zucker</li>
-            <li><input type="checkbox">Süssungsmittel</li>
-        </ul>
-    </li>
-
-    <li>
-        <input  value="tea" type="checkbox">Tee
-    </li>
-
-    <li class="content hide" onclick="showList()">
-        <ul>
-            <li><input type="checkbox">Rahm</li>
-            <li><input type="checkbox">Milch</li>
-            <li><input type="checkbox">Zucker</li>
-            <li><input type="checkbox">Süssungsmittel</li>
-        </ul>
-    </li>
-
-</ul>
 
 <div th:replace="/fragments/footer :: footer"></div>
 

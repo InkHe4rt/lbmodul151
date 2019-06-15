@@ -11,7 +11,15 @@ import projekt.modul_151.service.PersonService;
 
 import javax.validation.Valid;
 
-
+/**
+ * Dies ist der Controller für den shop und registration.
+ *
+ *
+ * @author  Dubler Michel
+ * @version 1.0
+ * @since   2019-06-15
+ *
+ */
 @Controller
 @RequestMapping
 public class AppController {
@@ -28,7 +36,7 @@ public class AppController {
 
         String pw = personService.getPerson(email).getPassword();
         if (pw.equals(password)){
-            return "shop";
+            return "shopArtikle";
         }
         return "failed";
     }
@@ -38,4 +46,5 @@ public class AppController {
         model.addAttribute(new Person());
         return "registration";
     }
+
 }

@@ -3,13 +3,12 @@ package projekt.modul_151.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import projekt.modul_151.model.Person;
-import projekt.modul_151.model.Place;
+import projekt.modul_151.model.Ordering;
 
 import java.util.Optional;
 
 /**
- * Dies ist das Repository für den Ort.
+ * Dies ist der Service für die Bestellung.
  *
  *
  * @author  Dubler Michel
@@ -18,9 +17,9 @@ import java.util.Optional;
  *
  */
 @Repository
-public interface PlaceRepository extends JpaRepository<Place,Integer>, CrudRepository<Place,Integer> {
+public interface OrderRepository extends JpaRepository<Ordering,Integer>, CrudRepository<Ordering,Integer> {
 
-    Optional<Place> findById(Long id);
+    Optional<Ordering> findById(Long id);
 
-    Optional<Place> findByCity(String city);
+    Optional<Ordering> findByComment(String comment);
 }

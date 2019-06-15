@@ -4,6 +4,15 @@ import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+/**
+ * Dies ist das model für die Bestellung.
+ *
+ *
+ * @author  Dubler Michel
+ * @version 1.0
+ * @since   2019-06-15
+ *
+ */
 @Entity(name = "ordering")
 @Table(name = "ordering")
 public class Ordering {

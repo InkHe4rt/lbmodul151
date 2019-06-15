@@ -12,6 +12,15 @@ import projekt.modul_151.service.PlaceService;
 import javax.validation.Valid;
 import java.util.Optional;
 
+/**
+ * Dies ist der Controller für die Person.
+ *
+ *
+ * @author  Dubler Michel
+ * @version 1.0
+ * @since   2019-06-15
+ *
+ */
 @Controller
 public class PersonController {
 

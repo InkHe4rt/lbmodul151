@@ -6,6 +6,15 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Dies ist das model für die Artikel.
+ *
+ *
+ * @author  Dubler Michel
+ * @version 1.0
+ * @since   2019-06-15
+ *
+ */
 @Entity(name = "article")
 @Table(name = "article")
 public class Article {

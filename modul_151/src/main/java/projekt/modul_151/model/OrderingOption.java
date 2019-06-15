@@ -2,6 +2,15 @@ package projekt.modul_151.model;
 
 import javax.persistence.*;
 
+/**
+ * Dies ist das model die Bestelloption.
+ *
+ *
+ * @author  Dubler Michel
+ * @version 1.0
+ * @since   2019-06-15
+ *
+ */
 @Entity(name = "ordering_Option")
 @Table(name = "ordering_Option")
 public class OrderingOption {
