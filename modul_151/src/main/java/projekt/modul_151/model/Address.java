@@ -7,7 +7,6 @@ import javax.validation.constraints.NotNull;
 /**
  * Dies ist das model für die Addresse.
  *
- *
  * @author  Dubler Michel
  * @version 1.0
  * @since   2019-06-15
@@ -32,6 +31,12 @@ public class Address {
     public Address() {
     }
 
+    /**
+     * macht einen overload von adresse mit den zwei atributen street & place
+     *
+     * @param street
+     * @param place
+     */
     public Address(String street, Place place) {
         this.street = street;
         this.place = place;

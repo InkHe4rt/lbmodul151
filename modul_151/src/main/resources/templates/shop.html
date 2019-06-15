@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Shop</title>
@@ -36,10 +36,15 @@
         </dl>
     </dd>
 </dl>
-
-<p> bitte loggen Sie sich ein oder Regestrieren Sie sich für Bestellungen falls gewünscht</p>
-
+<h3>Kosten pro Bestellung:</h3>
+<dl>
+    <dd><label>Tee</label><p> 5300 CHF</p></dd>
+    <br>
+    <dd><label>Kaffee</label><p> 8200CHF</p></dd>
+</dl>
+<P><i>Pro zusatz kommen 1 CHF aufschlag.</i></P>
+<br>
+<p><i> Bitte loggen Sie sich ein oder Regestrieren Sie sich für Bestellungen falls gewünscht</i></p>
 <div th:replace="/fragments/footer :: footer"></div>
-
 </body>
 </html>

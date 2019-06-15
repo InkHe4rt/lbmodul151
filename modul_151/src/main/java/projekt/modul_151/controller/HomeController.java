@@ -16,7 +16,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
-//  Mit dieser Methode rufe ich die Homeseite auf.
+    /**
+     * Mit dieser Methode rufe ich die Homeseite auf.
+     *
+     * @param model
+     * @return
+     */
      @GetMapping("/")
      public String showHome(Model model){
          return "home";

@@ -18,6 +18,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/showContent")
 public class ShopController {
 
+    /**
+     * Dies ruft den shopArtikle auf
+     *
+     * @param model
+     * @return
+     */
     @GetMapping
     public String showAnmelden(Model model){
         return "shopArtikle";

@@ -18,6 +18,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/login")
 public class LoginController {
 
+    /**
+     * mit dieser showAnmelden methode wird das login weiter gegeben.
+     * @param model
+     * @return
+     */
     @GetMapping
     public String showAnmelden(Model model){
         return "login";

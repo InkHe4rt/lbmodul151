@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,13 +10,13 @@
 
 <div th:replace="/fragments/header.html"></div>
 
-<h1>Bestellt:</h1>
+<h1>Vielen Dank für Ihre Bestellung!</h1>
 
-<label for="coffee">Produkt:</label> <div id="coffee" th:text="${order.getCoffee()}"/><br/>
+<h2>Sie haben Bestellt:</h2>
 
-
-<label for="tea">Produkt:</label> <div id="tea" th:text="${order.getTea()}"/><br/>
-
+<p>Produkt:<div id="coffee" th:text="${ordering.getComment()}"/></p><br/>
+<!--funktioniert noch nicht-->
+<p>Produkt:<div id="tea" th:text="${ordering.getComment()}"/></p><br/>
 
 <div th:replace="/fragments/footer :: footer"></div>
 </body>

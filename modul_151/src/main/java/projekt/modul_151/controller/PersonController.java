@@ -30,7 +30,13 @@ public class PersonController {
     @Autowired
     private PlaceService placeService;
 
-    // wenn ich den knopf drücke wird der nutzer erstellt
+    /**
+     *man wird zum Profil weiter geleited.
+     *
+     * @param person
+     * @param model
+     * @return
+     */
     @PostMapping("/profile")
     public String add(@ModelAttribute @Valid Person person, Model model){
         Place place = placeService.getPlace(person.getAddress().getPlace().getCity());
@@ -42,6 +48,13 @@ public class PersonController {
         return "profile";
     }
 
+    /**
+     *  nutzer wird erstellt - gespeichert
+     *
+     * @param id
+     * @param model
+     * @return
+     */
     @GetMapping(value = {"", "/{id}"})
     public String showForm(@PathVariable("id") Optional<Long> id, Model model){
         Person person;

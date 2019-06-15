@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
+    <title>shopArtikle</title>
 </head>
 <body>
 <div th:replace="/fragments/header.html"></div>
@@ -14,7 +14,7 @@
 
 <h2>Produkte:</h2>
 
-<form th:objekt="${Ordering}" method="post" th:action="@{/order}">
+<form th:objekt="${ordering}" method="post" th:action="@{/order}">
 <dl>
     <dd>
         <input value="coffee"  type="checkbox" id="coffee">
@@ -43,6 +43,14 @@
 </dl>
     <button type="submit"  class="btn btn-primary">Bestellen</button>
 </form>
+
+<h3>Kosten pro Bestellung:</h3>
+<dl>
+    <dd><label>Tee</label><p> 5300 CHF</p></dd>
+    <br>
+    <dd><label>Kaffee</label><p> 8200CHF</p></dd>
+</dl>
+<P><i>Pro zusatz kommen 1 CHF aufschlag.</i></P>
 
 
 <div th:replace="/fragments/footer :: footer"></div>
