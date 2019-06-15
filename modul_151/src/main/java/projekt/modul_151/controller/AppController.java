@@ -10,6 +10,7 @@ import projekt.modul_151.model.Ordering;
 import projekt.modul_151.model.Person;
 import projekt.modul_151.service.PersonService;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 /**
@@ -43,19 +44,24 @@ public class AppController {
      * Sofern beide stimmen wird man auf die html seite shopAtrikle weitergeleitet.
      * wenn es einen fehler hat wird meine fail html seite aufgerufen.
      *
+     *  ich erstelle hier noch eine session
      *
      * @param model
      * @param email
      * @param password
+     * @param session
      * @return
      */
     @PostMapping("/login/shop")
-    public String loginShop(Model model, @Valid String email, @Valid String password){
+    public String loginShop(Model model, @Valid String email, @Valid String password, HttpSession session){
 
         String pw = personService.getPerson(email).getPassword();
+
         if (pw.equals(password)){
             Ordering ordering = new Ordering();
             model.addAttribute(ordering);
+
+            session.setAttribute("active", true);
             return "shopArtikle";
         }
         return "failed";

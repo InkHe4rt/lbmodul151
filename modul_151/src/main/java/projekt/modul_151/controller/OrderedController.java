@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import projekt.modul_151.model.Ordering;
 import projekt.modul_151.service.OrderService;
 
+import javax.servlet.http.HttpSession;
+
 /**
  * Dies ist der Controller für die Bestellung.
  *
@@ -39,15 +41,17 @@ public class OrderedController {
     /**
      * Ich habe hier mit loginshop versucht die attribute von der bestellung weiter zu geben.
      *
+     * Session habe ich später hier ergänzt
+     * 
      * @param model
      * @param ordering
+     * @param session
      * @return
      */
     @PostMapping
-    public String loginShop(Model model,Ordering ordering ){
-        //hier frage ich ab ob es keine leere bestellung ist.
+    public String loginShop(Model model, Ordering ordering, HttpSession session){
 
-        //Ordering ordering = new Ordering();
+        session.removeAttribute("active");
         model.addAttribute(ordering);
 
         return "order";
